@@ -48,10 +48,10 @@ public class EvenNumberInARange {
 
 
         System.out.println("Max Min Array = " + solve(Arrays.asList(7, 3, 1, 5, 5, 5, 1, 2, 4, 5),
-                Arrays.asList(Arrays.asList(6,9), Arrays.asList(2,9), Arrays.asList(2,4), Arrays.asList(0,9)))));
+                Arrays.asList(Arrays.asList(6,9), Arrays.asList(2,9), Arrays.asList(2,4), Arrays.asList(0,9))));
     }
 
-    public ArrayList<Integer> solve(List<Integer> A, List<List<Integer>> B) {
+    public static ArrayList<Integer> solve(List<Integer> A, List<List<Integer>> B) {
 
         List<Integer> prefixEvenSum = new ArrayList<>();
         ArrayList<Integer> result = new ArrayList<>();
