@@ -2,13 +2,13 @@ package in.thilakraj;
 
 /**
  * 1.
- *
+ * <p>
  * Given an integer A, you need to find the count of it's factors.
- *
+ * <p>
  * Factor of a number is the number which divides it perfectly leaving no remainder.
- *
+ * <p>
  * Example : 1, 2, 3, 6 are factors of 6
- *
+ * <p>
  * 1 <= A <= 10^9
  */
 public class CountFactors {
@@ -22,14 +22,14 @@ public class CountFactors {
     public static int solve(int A) {
         int result = 0;
 
-        for (int i= 1; i <= A/i; i++) {
+        for (int i = 1; i <= A / i; i++) {
 
-            if(A%i == 0) {
+            if (A % i == 0) {
 
-                if(i == A/i) {
+                if (i == A / i) {
                     result++;
-                }else {
-                    result +=2;
+                } else {
+                    result += 2;
                 }
             }
 

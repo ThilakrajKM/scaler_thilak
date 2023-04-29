@@ -1,40 +1,39 @@
 package in.thilakraj;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 /**
- *  In-place Prefix Sum
- *
- *  Problem Description
+ * In-place Prefix Sum
+ * <p>
+ * Problem Description
  * Given an array A of N integers. Construct prefix sum of the array in the given array itself.
- *
+ * <p>
  * Problem Constraints
  * 1 <= N <= 105
  * 1 <= A[i] <= 103
- *
+ * <p>
  * Input Format
  * Only argument A is an array of integers.
- *
+ * <p>
  * Output Format
  * Return an array of integers denoting the prefix sum of the given array.
- *
- *
+ * <p>
+ * <p>
  * Example Input
  * Input 1:
- *
+ * <p>
  * A = [1, 2, 3, 4, 5]
  * Input 2:
- *
+ * <p>
  * A = [4, 3, 2]
- *
+ * <p>
  * Example Output
  * Output 1:
- *
+ * <p>
  * [1, 3, 6, 10, 15]
  * Output 2:
- *
+ * <p>
  * [4, 7, 9]
  */
 public class InPlacePrefixSumArray {
@@ -46,11 +45,11 @@ public class InPlacePrefixSumArray {
     }
 
     public static List<Integer> solve(List<Integer> A) {
-        for(int i=0; i<A.size(); i++) {
-            A.set(i, A.get(i) + ( i==0 ? 0 : A.get(i-1)));
+        for (int i = 0; i < A.size(); i++) {
+            A.set(i, A.get(i) + (i == 0 ? 0 : A.get(i - 1)));
         }
 
-        return  A;
+        return A;
     }
 
 }
