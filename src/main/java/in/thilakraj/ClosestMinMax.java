@@ -1,6 +1,5 @@
 package in.thilakraj;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -32,39 +31,39 @@ import java.util.List;
 public class ClosestMinMax {
 
     public static void main(String[] args) {
-        System.out.println("Closest Min Max = " + solve(Arrays.asList(7, 3, 5, 1, 5, 1,  2, 4, 5, 7, 1)));
-        int [] a = {7, 3, 5, 1, 5, 1,  2, 4, 5, 7, 1 };
+        System.out.println("Closest Min Max = " + solve(Arrays.asList(7, 3, 5, 1, 5, 1, 2, 4, 5, 7, 1)));
+        int[] a = {7, 3, 5, 1, 5, 1, 2, 4, 5, 7, 1};
         System.out.println("Closest Min Max = " + solve(a));
     }
 
     //mine
     public static int solve(List<Integer> A) {
-        int max=A.get(0), min=A.get(0), minIndex=0, maxIndex=0;
+        int max = A.get(0), min = A.get(0), minIndex = 0, maxIndex = 0;
 
-        for(int i=1; i<A.size(); i++) {
-            if(A.get(i) > max){
+        for (int i = 1; i < A.size(); i++) {
+            if (A.get(i) > max) {
                 max = A.get(i);
                 maxIndex = i;
             }
-            if(A.get(i)<min){
+            if (A.get(i) < min) {
                 min = A.get(i);
                 minIndex = i;
             }
         }
 
-        if(min == max) {
+        if (min == max) {
             return 1;
         }
 
-        int ans =  maxIndex > minIndex ? maxIndex-minIndex+1 : minIndex-maxIndex+1 ;
-        for(int i=0; i<A.size(); i++) {
-            if(A.get(i) == min) {
+        int ans = maxIndex > minIndex ? maxIndex - minIndex + 1 : minIndex - maxIndex + 1;
+        for (int i = 0; i < A.size(); i++) {
+            if (A.get(i) == min) {
                 minIndex = i;
-                ans = Integer.min(ans, maxIndex > minIndex ? maxIndex-minIndex +1 : minIndex-maxIndex+1);
+                ans = Integer.min(ans, maxIndex > minIndex ? maxIndex - minIndex + 1 : minIndex - maxIndex + 1);
             }
-            if(A.get(i) == max) {
+            if (A.get(i) == max) {
                 maxIndex = i;
-                ans = Integer.min(ans, maxIndex > minIndex ? maxIndex-minIndex+1 : minIndex-maxIndex+1);
+                ans = Integer.min(ans, maxIndex > minIndex ? maxIndex - minIndex + 1 : minIndex - maxIndex + 1);
             }
 
         }
@@ -78,16 +77,16 @@ public class ClosestMinMax {
         int min_Index = -1, max_Index = -1; // index of the last element having value equal to min_ele and max_ele
 
         int ans = Integer.MAX_VALUE;
-        for(int x:A){
+        for (int x : A) {
             min_ele = Math.min(min_ele, x);
             max_ele = Math.max(max_ele, x);
         }
 
-        for(int i=0 ; i<A.length ; i++){
-            if(A[i] == min_ele) min_Index = Math.max(min_Index, i);
-            if(A[i] == max_ele) max_Index = Math.max(max_Index, i);
+        for (int i = 0; i < A.length; i++) {
+            if (A[i] == min_ele) min_Index = Math.max(min_Index, i);
+            if (A[i] == max_ele) max_Index = Math.max(max_Index, i);
 
-            if(min_Index != -1 && max_Index != -1){
+            if (min_Index != -1 && max_Index != -1) {
                 int len = Math.abs(max_Index - min_Index) + 1;
                 ans = Math.min(ans, len);
             }

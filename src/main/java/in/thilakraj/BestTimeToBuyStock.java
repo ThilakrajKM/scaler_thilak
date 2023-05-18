@@ -33,7 +33,7 @@ import java.util.List;
 public class BestTimeToBuyStock {
 
     public static void main(String[] args) {
-        System.out.println("Best Time To Buy Stock = " + maxProfit(Arrays.asList(1 , 2 )));
+        System.out.println("Best Time To Buy Stock = " + maxProfit(Arrays.asList(1, 2)));
 
         //9969147 - mine 9707369
         System.out.println("Best Time To Buy Stock = " + maxProfit(Arrays.asList(5607815, 3316671, 8567241, 1953452, 5821723, 2107782, 3199656,
@@ -87,7 +87,7 @@ public class BestTimeToBuyStock {
                 4033708, 6569996, 2601589, 4932029, 368930, 8008150, 8278580, 975447, 4769515, 40109, 9065589, 2830638, 4373745, 962734, 359324, 9230525,
                 7782387, 3143786, 8592633, 1270713, 4652111, 8138868, 9251607, 2015304, 6491330, 701924, 4385305, 9020963, 8443216, 2843285, 2597757, 4567213,
                 3431958, 7318803, 406638, 1410336, 9772604, 6193593, 3886822, 2615443, 4811289, 3258804, 3922039, 259239, 5033857, 1220404, 772527, 8277795,
-                6296312, 1260979, 2415601 )));
+                6296312, 1260979, 2415601)));
     }
 
     /*public static int maxProfit(final List<Integer> A) {
@@ -158,11 +158,11 @@ public class BestTimeToBuyStock {
         int profit = 0;
         int min = Integer.MAX_VALUE;
 
-        for(int i=0; i<A.size(); i++) {
+        for (int i = 0; i < A.size(); i++) {
 
-            if(A.get(i) < min) {
+            if (A.get(i) < min) {
                 min = A.get(i);
-            } else if( A.get(i) - min > profit ) {
+            } else if (A.get(i) - min > profit) {
                 profit = A.get(i) - min;
             }
 

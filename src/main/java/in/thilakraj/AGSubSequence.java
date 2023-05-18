@@ -37,9 +37,9 @@ public class AGSubSequence {
 
     public static Long solve(String A) {
 
-        long agCount = 0l, gCount = 0l;
+        long agCount = 0L, gCount = 0L;
 
-        for (int i = A.length() -1; i >= 0; i--) {
+        for (int i = A.length() - 1; i >= 0; i--) {
 
             if (A.charAt(i) == 'G') {
                 gCount += 1;
