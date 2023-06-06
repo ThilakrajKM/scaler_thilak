@@ -31,10 +31,10 @@ public class DecimalToAnyBase {
         int result = 0;
         int rem = 0;
         int mul = 1;
-        while(A>0) {
-            rem = A%B;
-            result = result + ( rem * mul);
-            A= A/B;
+        while (A > 0) {
+            rem = A % B;
+            result = result + (rem * mul);
+            A = A / B;
             mul = mul * 10;
         }
         return result;

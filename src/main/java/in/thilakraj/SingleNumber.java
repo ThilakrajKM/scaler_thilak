@@ -13,7 +13,7 @@ public class SingleNumber {
 
         int result = 0;
 
-        for (int i=0; i<A.size(); i++) {
+        for (int i = 0; i < A.size(); i++) {
 
             result = A.get(i) ^ result;
         }

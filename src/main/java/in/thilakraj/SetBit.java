@@ -4,23 +4,23 @@ package in.thilakraj;
  * Problem Description
  * You are given two integers A and B.
  * Set the A-th bit and B-th bit in 0, and return output in decimal Number System.
- *
+ * <p>
  * Note:
  * The bit positions are 0-indexed, which means that the least significant bit (LSB) has index 0.
- *
+ * <p>
  * Problem Constraints
  * 0 <= A <= 30
  * 0 <= B <= 30
- *
- *
+ * <p>
+ * <p>
  * Input Format
  * First argument A is an integer.
  * Second argument B is an integer.
- *
- *
+ * <p>
+ * <p>
  * Output Format
  * Return an integer.
- *
+ * <p>
  * Example Input
  * Input 1:
  * A = 3
@@ -28,8 +28,8 @@ package in.thilakraj;
  * Input 2:
  * A = 4
  * B = 4
- *
- *
+ * <p>
+ * <p>
  * Example Output
  * Output 1:
  * 40
@@ -38,11 +38,11 @@ package in.thilakraj;
  */
 public class SetBit {
     public static void main(String[] args) {
-        System.out.println("Ans : "+ solve(3, 5));
-        System.out.println("Ans : "+ solve(4, 4));
+        System.out.println("Ans : " + solve(3, 5));
+        System.out.println("Ans : " + solve(4, 4));
     }
 
     public static int solve(int A, int B) {
-        return (1<<A)|(1<<B);
+        return (1 << A) | (1 << B);
     }
 }

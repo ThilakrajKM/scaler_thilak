@@ -6,16 +6,16 @@ public class IntrestingArray {
 
     public String solve(ArrayList<Integer> A) {
 
-        int countOdd=0;
+        int countOdd = 0;
 
-        for(int i=0; i<A.size(); i++) {
+        for (int i = 0; i < A.size(); i++) {
 
-            if(A.get(i)%2!=0) {
+            if (A.get(i) % 2 != 0) {
                 countOdd++;
             }
         }
 
-        if(countOdd%2==0) {
+        if (countOdd % 2 == 0) {
             return "Yes";
         }
 

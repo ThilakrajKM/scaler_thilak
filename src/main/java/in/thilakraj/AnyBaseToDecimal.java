@@ -6,10 +6,10 @@ public class AnyBaseToDecimal {
         int result = 0;
         int mul = 1;
 
-        while(A>0) {
-            int rem = A%10;
+        while (A > 0) {
+            int rem = A % 10;
             result = result + (rem * mul);
-            A=A/10;
+            A = A / 10;
             mul = mul * B;
         }
 

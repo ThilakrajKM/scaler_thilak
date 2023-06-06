@@ -45,12 +45,12 @@ package in.thilakraj;
 public class CheckBit {
 
     public static void main(String[] args) {
-        System.out.println("Ans : "+ solve(4, 1));
-        System.out.println("Ans : "+ solve(5, 2));
+        System.out.println("Ans : " + solve(4, 1));
+        System.out.println("Ans : " + solve(5, 2));
     }
 
     public static int solve(int A, int B) {
         int num = A >> B;
-        return num&1;
+        return num & 1;
     }
 }

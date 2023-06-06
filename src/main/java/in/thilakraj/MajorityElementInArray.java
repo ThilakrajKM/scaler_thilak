@@ -34,13 +34,13 @@ public class MajorityElementInArray {
         int maxElement = A.get(0);
         int count = 1;
 
-        for(int i=1; i<A.size(); i++) {
+        for (int i = 1; i < A.size(); i++) {
 
-            if(maxElement == A.get(i)) {
+            if (maxElement == A.get(i)) {
                 count++;
             } else {
                 count--;
-                if(count ==0) {
+                if (count == 0) {
                     maxElement = A.get(i);
                     count++;
                 }
