@@ -1,7 +1,7 @@
 package in.thilakraj;
 
-import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * Problem Description
@@ -51,11 +51,8 @@ import java.util.HashMap;
  */
 public class CheckPairSum {
 
-    public static void main(String[] args) {
 
-    }
-
-    public int solve(int A, ArrayList<Integer> B) {
+    public static int solve(int A, List<Integer> B) {
         HashMap<Integer, Integer> numFreq = new HashMap<>();
 
         for (int i = 0; i < B.size(); i++) {
