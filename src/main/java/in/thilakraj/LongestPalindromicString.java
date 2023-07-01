@@ -52,19 +52,23 @@ public class LongestPalindromicString {
 
     public static void main(String[] args) {
         System.out.println("Ans : " + longestPalindrome("abb"));
+        //System.out.println("Ans : " + longestPalindrome("abdbc"));
     }
 
     public static String longestPalindrome(String A) {
 
         int ansP1 = 0, ansP2 = 0, ansLen = 0;
 
+        //odd length
         for (int i = 0; i < A.length(); i++) {
             int p1 = i, p2 = i;
             while (p1 >= 0 && p2 < A.length() && A.charAt(p1) == A.charAt(p2)) {
                 p1 = p1 - 1;
                 p2 = p2 + 1;
             }
-            int len = p2 - p1 - 1;
+            p1++;
+            p2--;
+            int len = p2 - p1 + 1;
             if (len > ansLen && p2 < A.length() && p1 >= 0) {
                 ansLen = len;
                 ansP1 = p1;
@@ -72,13 +76,16 @@ public class LongestPalindromicString {
             }
         }
 
+        //even length
         for (int i = 0; i < A.length(); i++) {
             int p1 = i, p2 = i + 1;
             while (p1 >= 0 && p2 < A.length() && A.charAt(p1) == A.charAt(p2)) {
                 p1 = p1 - 1;
                 p2 = p2 + 1;
             }
-            int len = p2 - p1 - 1;
+            p1++;
+            p2--;
+            int len = p2 - p1 + 1;
             if (len > ansLen && p2 < A.length() && p1 >= 0) {
                 ansLen = len;
                 ansP1 = p1;
@@ -87,7 +94,7 @@ public class LongestPalindromicString {
         }
 
         char[] resultArray = new char[ansP2 - ansP1 + 1];
-        for (int i = ansP1; i < ansP2; i++) {
+        for (int i = ansP1; i <= ansP2; i++) {
             resultArray[i - ansP1] = A.charAt(i);
         }
         return new String(resultArray);

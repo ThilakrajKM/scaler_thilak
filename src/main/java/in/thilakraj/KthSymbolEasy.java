@@ -62,18 +62,64 @@ package in.thilakraj;
  */
 public class KthSymbolEasy {
 
-    public int solve(int A, int B) {
+    public static void main(String[] args) {
+        //System.out.println("Ans : " + hardCaseSolve(4, 6));
+        //System.out.println("Ans : " + hardCaseSolve(3, 2));
+        System.out.println("Ans : " + hardCaseSolve(5, 8));
+    }
+
+    public static int hardCaseSolve(int A, long B) {
+        if (A == 1)
+            return 0;
+        int res = hardCaseSolve(A - 1, B / 2);
+        if (B % 2 == 0)
+            return res;
+        else
+            return 1 - res;
+    }
+
+    public static int solve(int A, int B) {
 
         String value = generateKthSymbol(A, "0", 1);
 
-        return 0;
+        return value.charAt(B) - '0';
     }
 
-    private String generateKthSymbol(int destinationRow, String number, int currentRow) {
-        if (currentRow == destinationRow) {
+    private static String generateKthSymbol(int destinationRow, String number, int currentRow) {
+        if (currentRow > destinationRow) {
             return number;
         }
 
-        return "";
+        char[] numberChars = number.toCharArray();
+        char[] newNumChars = new char[2 * numberChars.length];
+
+        for (int i = 0; i < numberChars.length; i++) {
+            if (numberChars[i] == '0') {
+                newNumChars[i * 2] = '0';
+                newNumChars[(i * 2) + 1] = '1';
+            } else {
+                newNumChars[i * 2] = '1';
+                newNumChars[(i * 2) + 1] = '0';
+            }
+        }
+
+        return generateKthSymbol(destinationRow, new String(newNumChars), currentRow + 1);
     }
+
+    /**
+     * public class Solution {
+     *     public int find(int n, long k){
+     *      	if(k==0){
+     *     		return 0;
+     *                }
+     *     	int val = find(n- 1 , k / 2);
+     *     	if(k % 2 == 0){
+     *     		return val;*     	}
+     *     	return 1 - val;
+     *     }
+     *     public int solve(int A, long B) {
+     *         return find(A, B);
+     *     }
+     * }
+     */
 }
