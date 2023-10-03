@@ -44,14 +44,14 @@ public class CountSort {
 
     public ArrayList<Integer> solve(ArrayList<Integer> A) {
 
-        int[] freqArray = new int[100000];
+        int[] freqArray = new int[100001];
         ArrayList<Integer> result = new ArrayList<>();
 
         for (int i = 0; i < A.size(); i++) {
             freqArray[A.get(i)]++;
         }
 
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 100001; i++) {
             for (int j = 0; j < freqArray[i]; j++) {
                 result.add(i);
             }
