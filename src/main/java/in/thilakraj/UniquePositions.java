@@ -15,7 +15,7 @@ public class UniquePositions {
         HashSet<Long> positions = new HashSet<>();
 
         char[] movesChars = moves.toCharArray();
-        long distance = 0l;
+        long distance = 0L;
         positions.add(distance);
 
         for (int i = 0; i < movesChars.length; i++) {

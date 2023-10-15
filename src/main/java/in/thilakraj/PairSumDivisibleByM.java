@@ -72,16 +72,16 @@ public class PairSumDivisibleByM {
             remArr[A.get(i) % B]++;
         }
 
-        long ans = 0l;
+        long ans = 0L;
 
         for (int i = 1, j = B - 1; i < j; i++, j--) {
             ans += (remArr[i] * remArr[j]);
         }
         //Edge cases
-        ans += (remArr[0] * (remArr[0] - 1)) / 2l;
+        ans += (remArr[0] * (remArr[0] - 1)) / 2L;
 
         if (B % 2 == 0) {
-            ans += (remArr[B / 2] * (remArr[B / 2] - 1)) / 2l;
+            ans += (remArr[B / 2] * (remArr[B / 2] - 1)) / 2L;
         }
 
         return (int) (ans % 1000000007);

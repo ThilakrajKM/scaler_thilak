@@ -104,7 +104,6 @@ public class RotateMatrix {
                 A[i][A.length - 1 - j] = temp;
             }
         }
-        return;
     }
 
 }

@@ -66,7 +66,7 @@ public class CheckPairSum {
         for (int i = 0; i < B.size(); i++) {
             int diff = A - B.get(i);
             if (numFreq.containsKey(diff) &&
-                    ((diff == B.get(i) && numFreq.get(diff) > 1) || (diff != B.get(i)))) {
+                    (diff != B.get(i) || numFreq.get(diff) > 1)) {
                 return 1;
             }
         }

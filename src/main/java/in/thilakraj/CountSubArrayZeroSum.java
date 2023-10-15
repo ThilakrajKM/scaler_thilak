@@ -75,7 +75,7 @@ public class CountSubArrayZeroSum {
 
     public int solve(ArrayList<Integer> A) {
         HashMap<Long, Long> prefixSumFreqMap = new HashMap<>();
-        prefixSumFreqMap.put(0l, 1l);
+        prefixSumFreqMap.put(0L, 1L);
         long result = 0;
 
         long totalSum = 0;
@@ -86,7 +86,7 @@ public class CountSubArrayZeroSum {
                 result = result + freq;
                 prefixSumFreqMap.put(totalSum, ++freq);
             } else {
-                prefixSumFreqMap.put(totalSum, 1l);
+                prefixSumFreqMap.put(totalSum, 1L);
             }
         }
 

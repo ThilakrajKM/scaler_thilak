@@ -147,7 +147,7 @@ public class SubMatrixSumQueries {
             int n = A.length;
             int m = A[0].length;
 
-            long p[][] = new long[n][m];
+            long[][] p = new long[n][m];
             // calculate prefix sum in 2 steps.
             // step 0 - copy all elements from original array to prefix array.
             // step 1 - calculate initial prefix sum using row wise prefix sum.
@@ -178,7 +178,7 @@ public class SubMatrixSumQueries {
                 }
             }
 
-            int ans[] = new int[B.length];
+            int[] ans = new int[B.length];
             long mod = 1000000007;
 
             // p[a2][b2] - p[a1-1][b2] - p[a2][b1-1] + p[a1-1][b1-1].

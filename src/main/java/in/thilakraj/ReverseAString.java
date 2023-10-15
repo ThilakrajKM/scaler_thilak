@@ -68,9 +68,7 @@ public class ReverseAString {
             int charLength = j - i - 1;
             if (charLength > 0) {
                 char[] splitChars = new char[charLength];
-                for (int k = i; k < i + charLength; k++) {
-                    splitChars[k - i] = chars[k];
-                }
+                System.arraycopy(chars, i, splitChars, i - i, i + charLength - i);
                 i += charLength - 1;
                 stringArrayList.add(new String(splitChars));
             }

@@ -87,7 +87,7 @@ public class PrimeModuloInverse {
 
     static long power(int a, int b, int B) {
         if (b == 0) {
-            return 1l;
+            return 1L;
         }
         long p = power(a, b / 2, B) % B;
         p = (p * p) % B;

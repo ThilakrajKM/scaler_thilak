@@ -83,7 +83,7 @@ public class PairWithGivenXOR {
         for (int i = 0; i < A.size(); i++) {
             int xorNum = (B ^ A.get(i));
             if (numFreq.containsKey(xorNum) &&
-                    ((xorNum == A.get(i) && numFreq.get(xorNum) > 1) || (xorNum != A.get(i)))) {
+                    (xorNum != A.get(i) || numFreq.get(xorNum) > 1)) {
                 result++;
             }
         }

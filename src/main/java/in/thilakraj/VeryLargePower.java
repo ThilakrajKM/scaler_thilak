@@ -61,7 +61,7 @@ public class VeryLargePower {
 
     static long power(int a, long b, int B) {
         if (b == 0) {
-            return 1l;
+            return 1L;
         }
         long p = power(a, b / 2, B) % B;
         p = (p * p) % B;

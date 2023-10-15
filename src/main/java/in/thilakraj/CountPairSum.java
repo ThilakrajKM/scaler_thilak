@@ -39,7 +39,7 @@ public class CountPairSum {
 
             int mod = (int) (1e9 + 7);
 
-            long result = 0l;
+            long result = 0L;
             for (int i = 0; i < A.size(); i++) {
                 int diff = B - A.get(i);
                 if (numFreq.containsKey(diff)) {
